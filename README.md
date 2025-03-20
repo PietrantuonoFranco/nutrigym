@@ -31,7 +31,7 @@ Como segunda relación, en el caso de lesión, brindar una opción confiable de 
 ## CONTACTO:
 En el caso de tener dudas, consúltenos a cualquiera de nuestros integrantes:
 + ivanandresvijandi@alu.frlp.utn.edu.ar
-+ fpietrantuono@alu.frlp.utn.edu.ar
++ francopietrantuono999@gmail.com
 + vmoscuzza@alu.frlp.utn.edu.ar
 + nicolasezequielvaldes@alu.frlp.utn.edu.ar
 + gferrarisdavies@alu.frlp.utn.edu.ar
