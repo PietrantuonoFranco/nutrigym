@@ -1,0 +1,36 @@
+Aquí se guardan las funciones de acción (actions) que manejan la lógica principal de tu aplicación. Los actions son responsables de:
+- Procesar los datos
+- Ejecutar la lógica de negocio
+- Interactuar con la base de datos (a través de los servicios)
+- Manejar validaciones y transformaciones de datos
+- Retornar datos o errores
+
+¿Qué es un action?
+Un action es una función que encapsula una operación específica de la aplicación. A diferencia de los controladores tradicionales, los actions:
+- No manejan directamente requests/responses HTTP
+- Retornan datos o lanzan errores que serán manejados por las rutas API
+- Son más reutilizables ya que no están acoplados al protocolo HTTP
+- Pueden ser utilizados tanto por rutas API como por otros componentes de la aplicación
+
+Estructura típica de un action:
+
+javascript
+export async function createUser(userData) {
+// 1. Validación de datos
+// 2. Transformación de datos si es necesario
+// 3. Llamada al servicio correspondiente
+// 4. Manejo de errores específicos
+// 5. Retorno de resultados
+}
+
+
+La separación entre actions y rutas API permite:
+- Código más limpio y mantenible
+- Mejor testabilidad
+- Reutilización de lógica
+- Separación clara de responsabilidades
+
+Los actions trabajan en conjunto con:
+- services/: Para operaciones de base de datos
+- validations/: Para reglas de validación
+- utils/: Para funciones auxiliares
