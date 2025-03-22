@@ -79,9 +79,10 @@ export async function actualizar(id, usuarioParam) {
     const datosActualizados = { ...usuarioParam };
 
     if (usuarioParam.contrasenia) {
-        const usuario = Usuario.build({ contrasenia: usuarioParam.contrasenia });
-        await usuario.encriptarContrasenia();
-        datosActualizados.contrasenia = usuario.contrasenia;
+        const saltRounds = 10;
+        const hashedPassword = await bcrypt.hash(usuarioParam.contrasenia, saltRounds);
+
+        datosActualizados.contrasenia = hashedPassword;
     }
 
     const [actualizado] = await Usuario.update(datosActualizados, { 
