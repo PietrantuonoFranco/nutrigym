@@ -224,7 +224,7 @@ const Header = () => {
                 {status === 'unauthenticated' && (
                   <Link
                     href="/cuenta"
-                    className="text-gray-600 hover:text-[#F42F00] block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 flex items-center justify-center gap-2"
+                    className="w-full text-gray-600 hover:text-[#F42F00] block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 flex items-center justify-center gap-2"
                     onClick={() => setIsOpen(false)}
                   >
                     <User className="w-4 h-4" size={24} />
