@@ -1,13 +1,10 @@
 import { Sequelize } from 'sequelize';
 import * as pg from 'pg';
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; 
-
-
 const config = {
     dialect: 'postgres',
     dialectModule: pg,
-    logging: false,
+    logging: console.log,
     dialectOptions: {
         ssl: {
             require: true,
@@ -22,7 +19,7 @@ const config = {
     }
 };
 
-const sequelize = new Sequelize(process.env.POSTGRES_URL_NON_POOLING, config); //Cliente de sequelize
+const sequelize = new Sequelize(process.env.POSTGRES_URL, config); //Cliente de sequelize
 
 // Función para probar la conexión
 const testConnection = async () => {
